@@ -1,107 +1,105 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أكاديمية فيصل - التسجيل</title>
+    <title>التسجيل - أكاديمية كرة القدم</title>
+    
+    <!-- استيراد Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- استيراد أيقونات FontAwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- تحسين الخطوط -->
     <style>
         body {
-            background-color: black;
-            color: gold;
-            font-family: Arial, sans-serif;
-            direction: rtl;
-            text-align: right;
-            margin: 0;
+            font-family: 'Noto Sans Arabic', sans-serif;
+            transition: background 0.3s ease-in-out;
         }
-        .container {
-            width: 90%;
-            margin: auto;
-            padding: 20px;
-        }
-        .header {
-            background-color: gold;
-            padding: 15px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .box {
-            background-color: black;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid gold;
-            margin: 20px 0;
-        }
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: gold;
-            color: black;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .btn:hover {
-            background-color: darkgoldenrod;
-        }
-        /* شاشة التسجيل السوداء */
-        .black-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            display: none;
-            z-index: 1000;
+        .gold-border {
+            border: 2px solid #FFD700;
         }
     </style>
 </head>
-<body>
+<body class="bg-black text-white">
+    
+    <!-- ✅ زر تبديل الوضع الليلي والنهاري -->
+    <button id="toggleTheme" class="fixed top-4 left-4 bg-gold text-black p-2 rounded-full shadow-md">
+        <i id="themeIcon" class="fas fa-moon"></i>
+    </button>
 
-    <div class="header">القبول والتسجيل - أكاديمية فيصل</div>
+    <!-- ✅ الهيدر -->
+    <header class="bg-gold py-4 text-center text-black text-2xl font-bold shadow-lg">
+        أكاديمية كرة القدم
+    </header>
 
-    <div class="container">
-        <div class="box">
-            <h2>القبول والتسجيل</h2>
-            <p>يمكن التسجيل في البرنامج عبر خطوات بسيطة، ليصبح المسجل جزءًا من برنامج أكاديمية فيصل وينطلق في رحلته المعرفية التفاعلية.</p>
-            <button class="btn" onclick="showBlackScreen()">سجل الآن</button>
+    <!-- ✅ قسم التسجيل -->
+    <section class="max-w-3xl mx-auto mt-10 p-6 bg-gray-900 shadow-lg rounded-lg gold-border">
+        <h2 class="text-4xl font-bold text-gold mb-4 text-center animate-fadeIn">القبول والتسجيل</h2>
+        <p class="text-lg text-gray-300 text-center mb-6">
+            يمكن التسجيل في الأكاديمية بخطوات بسيطة ليصبح اللاعب جزءًا من فريقنا.
+        </p>
+        <div class="text-center">
+            <button class="bg-gold text-black px-6 py-3 rounded-lg text-lg font-bold transition duration-300 hover:bg-yellow-500 shadow-md hover:scale-105">
+                سجل الآن
+            </button>
+        </div>
+    </section>
+
+    <!-- ✅ خطوات التسجيل مع تأثيرات عند التمرير -->
+    <section class="max-w-3xl mx-auto mt-10 p-6 bg-gray-900 shadow-lg rounded-lg gold-border">
+        <div class="step opacity-0 transition-opacity duration-500 ease-in-out">
+            <h3 class="text-2xl font-bold text-gold mb-4">01 - التسجيل</h3>
+            <p class="text-lg text-gray-300 mb-4">
+                قم بملء نموذج التسجيل على الموقع خلال فترة التسجيل المعلنة.
+            </p>
         </div>
 
-        <div class="box">
-            <h3>01 - التسجيل</h3>
-            <p>قم بملء نموذج التسجيل على موقعنا خلال فترة التسجيل المخصصة.</p>
+        <div class="step opacity-0 transition-opacity duration-500 ease-in-out">
+            <h3 class="text-2xl font-bold text-gold mb-4">02 - التأكيد</h3>
+            <p class="text-lg text-gray-300 mb-4">
+                سيتم مراجعة الطلب والتواصل معك لتحديد الخطوات القادمة.
+            </p>
         </div>
 
-        <div class="box">
-            <h3>02 - التأكيد</h3>
-            <p>بعد تقديم نموذج التسجيل، سيتم إرسال رسالة إلى بريدك الإلكتروني لتأكيد الحساب.</p>
+        <div class="step opacity-0 transition-opacity duration-500 ease-in-out">
+            <h3 class="text-2xl font-bold text-gold mb-4">03 - الاختبار</h3>
+            <p class="text-lg text-gray-300">
+                يخضع المتقدم لاختبار ميداني لتقييم المهارات قبل القبول النهائي.
+            </p>
         </div>
+    </section>
 
-        <div class="box">
-            <h3>03 - تنشيط الحساب</h3>
-            <p>بعد تأكيد البريد الإلكتروني، يتم تنشيط حسابك ويمكنك تسجيل الدخول إلى المنصة.</p>
-        </div>
+    <!-- ✅ الفوتر -->
+    <footer class="text-center text-gray-400 mt-10 py-4">
+        جميع الحقوق محفوظة &copy; 2025 أكاديمية كرة القدم
+    </footer>
 
-        <div class="box">
-            <h3>تاريخ التسجيل</h3>
-            <p>بداية التسجيل: 2 مارس 2025 - 3 رمضان 1446</p>
-            <p>نهاية التسجيل: 4 أغسطس 2025 - 10 صفر 1447</p>
-        </div>
-    </div>
-
-    <!-- شاشة سوداء عند الضغط على زر التسجيل -->
-    <div class="black-screen" id="blackScreen"></div>
-
+    <!-- ✅ JavaScript لإضافة تأثيرات حديثة -->
     <script>
-        function showBlackScreen() {
-            document.getElementById("blackScreen").style.display = "block";
-        }
+        // تأثير ظهور العناصر عند التمرير
+        document.addEventListener("scroll", function() {
+            const steps = document.querySelectorAll(".step");
+            steps.forEach((step) => {
+                if (step.getBoundingClientRect().top < window.innerHeight - 100) {
+                    step.classList.add("opacity-100");
+                }
+            });
+        });
+
+        // تبديل بين الوضع الليلي والنهاري
+        document.getElementById("toggleTheme").addEventListener("click", function() {
+            document.body.classList.toggle("bg-white");
+            document.body.classList.toggle("text-black");
+
+            const icon = document.getElementById("themeIcon");
+            if (document.body.classList.contains("bg-white")) {
+                icon.classList.replace("fa-moon", "fa-sun");
+            } else {
+                icon.classList.replace("fa-sun", "fa-moon");
+            }
+        });
     </script>
 
 </body>
