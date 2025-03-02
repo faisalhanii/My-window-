@@ -3,84 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>التسجيل في الأكاديمية</title>
+    <title>أكاديمية فيصل - التسجيل</title>
     <style>
         body {
-            background-color: #000;
-            color: #FFD700;
+            background-color: black;
+            color: gold;
             font-family: Arial, sans-serif;
-            text-align: center;
             direction: rtl;
+            text-align: right;
+            margin: 0;
         }
         .container {
-            max-width: 600px;
-            margin: 50px auto;
+            width: 90%;
+            margin: auto;
             padding: 20px;
-            border: 2px solid #FFD700;
-            border-radius: 10px;
-            background-color: #111;
         }
-        h1 {
-            color: #FFD700;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        label {
-            margin-top: 10px;
+        .header {
+            background-color: gold;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
             font-weight: bold;
         }
-        input {
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #FFD700;
-            border-radius: 5px;
-            background-color: #222;
-            color: #FFD700;
-            width: 80%;
+        .box {
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid gold;
+            margin: 20px 0;
         }
-        button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #FFD700;
-            color: #000;
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: gold;
+            color: black;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
+            text-decoration: none;
         }
-        button:hover {
-            background-color: #e6c300;
+        .btn:hover {
+            background-color: darkgoldenrod;
         }
-        .logo img {
-            width: 150px;
-            border-radius: 50%;
+        /* شاشة التسجيل السوداء */
+        .black-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: none;
+            z-index: 1000;
         }
     </style>
 </head>
 <body>
-    <div class="logo">
-        <img src="URL_صورة_الشعار" alt="شعار الأكاديمية">
-    </div>
+
+    <div class="header">القبول والتسجيل - أكاديمية فيصل</div>
+
     <div class="container">
-        <h1>استمارة التسجيل</h1>
-        <form action="#" method="POST">
-            <label for="name">الاسم الكامل:</label>
-            <input type="text" id="name" name="name" required>
+        <div class="box">
+            <h2>القبول والتسجيل</h2>
+            <p>يمكن التسجيل في البرنامج عبر خطوات بسيطة، ليصبح المسجل جزءًا من برنامج أكاديمية فيصل وينطلق في رحلته المعرفية التفاعلية.</p>
+            <button class="btn" onclick="showBlackScreen()">سجل الآن</button>
+        </div>
 
-            <label for="age">العمر:</label>
-            <input type="number" id="age" name="age" required>
+        <div class="box">
+            <h3>01 - التسجيل</h3>
+            <p>قم بملء نموذج التسجيل على موقعنا خلال فترة التسجيل المخصصة.</p>
+        </div>
 
-            <label for="academy">الأكاديمية السابقة:</label>
-            <input type="text" id="academy" name="academy">
+        <div class="box">
+            <h3>02 - التأكيد</h3>
+            <p>بعد تقديم نموذج التسجيل، سيتم إرسال رسالة إلى بريدك الإلكتروني لتأكيد الحساب.</p>
+        </div>
 
-            <label for="phone">رقم الهاتف:</label>
-            <input type="tel" id="phone" name="phone" required>
+        <div class="box">
+            <h3>03 - تنشيط الحساب</h3>
+            <p>بعد تأكيد البريد الإلكتروني، يتم تنشيط حسابك ويمكنك تسجيل الدخول إلى المنصة.</p>
+        </div>
 
-            <button type="submit">إرسال</button>
-        </form>
+        <div class="box">
+            <h3>تاريخ التسجيل</h3>
+            <p>بداية التسجيل: 2 مارس 2025 - 3 رمضان 1446</p>
+            <p>نهاية التسجيل: 4 أغسطس 2025 - 10 صفر 1447</p>
+        </div>
     </div>
+
+    <!-- شاشة سوداء عند الضغط على زر التسجيل -->
+    <div class="black-screen" id="blackScreen"></div>
+
+    <script>
+        function showBlackScreen() {
+            document.getElementById("blackScreen").style.display = "block";
+        }
+    </script>
+
 </body>
 </html>
