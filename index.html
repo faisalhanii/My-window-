@@ -6,48 +6,44 @@
     <title>التسجيل في الأكاديمية</title>
     <style>
         body {
-            background-color: #000; /* خلفية سوداء */
-            color: #FFD700; /* نص ذهبي */
+            background-color: #000;
+            color: #FFD700;
             font-family: Arial, sans-serif;
             text-align: center;
-            direction: rtl; /* اتجاه النص عربي */
+            direction: rtl;
         }
-
         .container {
-            max-width: 400px;
+            max-width: 600px;
             margin: 50px auto;
             padding: 20px;
             border: 2px solid #FFD700;
             border-radius: 10px;
-            background-color: #111; /* لون غامق داخل الصندوق */
+            background-color: #111;
         }
-
         h1 {
             color: #FFD700;
         }
-
         form {
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
-
         label {
             margin-top: 10px;
             font-weight: bold;
         }
-
         input {
-            padding: 8px;
+            padding: 10px;
             margin-top: 5px;
             border: 1px solid #FFD700;
             border-radius: 5px;
             background-color: #222;
             color: #FFD700;
+            width: 80%;
         }
-
         button {
             margin-top: 15px;
-            padding: 10px;
+            padding: 10px 20px;
             background-color: #FFD700;
             color: #000;
             border: none;
@@ -55,13 +51,19 @@
             cursor: pointer;
             font-weight: bold;
         }
-
         button:hover {
             background-color: #e6c300;
+        }
+        .logo img {
+            width: 150px;
+            border-radius: 50%;
         }
     </style>
 </head>
 <body>
+    <div class="logo">
+        <img src="URL_صورة_الشعار" alt="شعار الأكاديمية">
+    </div>
     <div class="container">
         <h1>استمارة التسجيل</h1>
         <form action="#" method="POST">
