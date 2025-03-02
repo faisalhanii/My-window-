@@ -3,72 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسجيل في أكاديمية كرة القدم</title>
+    <title>التسجيل في الأكاديمية</title>
     <style>
         body {
-            font-family: 'Tajawal', sans-serif;
-            background-color: #000;
-            color: #fff;
+            background-color: #000; /* خلفية سوداء */
+            color: #FFD700; /* نص ذهبي */
+            font-family: Arial, sans-serif;
             text-align: center;
-            margin: 0;
-            padding: 0;
+            direction: rtl; /* اتجاه النص عربي */
         }
+
         .container {
-            background-color: #111;
-            width: 90%;
             max-width: 400px;
             margin: 50px auto;
             padding: 20px;
+            border: 2px solid #FFD700;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+            background-color: #111; /* لون غامق داخل الصندوق */
         }
-        h2 {
+
+        h1 {
             color: #FFD700;
         }
-        input {
-            width: 90%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            text-align: center;
+
+        form {
+            display: flex;
+            flex-direction: column;
         }
-        .button {
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            background-color: #222;
+            color: #FFD700;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
             background-color: #FFD700;
             color: #000;
-            font-weight: bold;
-            padding: 10px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            width: 100%;
+            font-weight: bold;
         }
-        .player-image {
-            width: 100%;
-            max-width: 400px;
-            display: block;
-            margin: 20px auto;
-            border-radius: 10px;
+
+        button:hover {
+            background-color: #e6c300;
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <h2>تسجيل في أكاديمية كرة القدم | Football Academy Registration</h2>
-        
-        <!-- صورة لاعب كرة القدم -->
-        <img src="https://i.postimg.cc/5tchJnqQ/0319-C6-BA-EE61-4-E3-B-ACAF-8715-FDCC7-ED0.png" 
-             alt="Soccer Player" class="player-image">
-        
-        <input type="text" placeholder="الإسم الكامل | Full Name">
-        <input type="text" placeholder="العمر | Age">
-        <input type="text" placeholder="الأكاديمية السابقة | Previous Academy">
-        <input type="text" placeholder="رقم الهاتف | Phone Number">
-        
-        <button class="button">تسجيل | Register</button>
-    </div>
+        <h1>استمارة التسجيل</h1>
+        <form action="#" method="POST">
+            <label for="name">الاسم الكامل:</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="age">العمر:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="academy">الأكاديمية السابقة:</label>
+            <input type="text" id="academy" name="academy">
+
+            <label for="phone">رقم الهاتف:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit">إرسال</button>
+        </form>
+    </div>
 </body>
 </html>
